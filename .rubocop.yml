@@ -3,6 +3,7 @@ AllCops:
     - db/**
     - db/migrate/**
     - bin/**
+    - config/**/**
 
 Metrics/LineLength:
   Max: 120
