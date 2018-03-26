@@ -9,6 +9,7 @@ end
 
 gem 'rails', '~> 5.1.5'
 
+gem 'faker'
 gem 'geocoder'
 gem 'puma', '~> 3.7'
 gem 'sqlite3'
