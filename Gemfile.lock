@@ -48,6 +48,7 @@ GEM
     crass (1.0.3)
     erubi (1.7.1)
     ffi (1.9.23)
+    geocoder (1.4.7)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     i18n (0.9.5)
@@ -146,6 +147,7 @@ PLATFORMS
 
 DEPENDENCIES
   awesome_print
+  geocoder
   listen (>= 3.0.5, < 3.2)
   pry-byebug
   puma (~> 3.7)
