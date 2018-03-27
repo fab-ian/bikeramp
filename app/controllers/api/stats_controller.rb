@@ -10,5 +10,9 @@ module Api
 
       render json: { total_distance: Formater.km_format(stat.first), total_price: Formater.price_format(stat.second) }
     end
+
+    def monthly
+      render json: Stats.monthly
+    end
   end
 end

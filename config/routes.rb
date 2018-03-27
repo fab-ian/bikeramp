@@ -7,5 +7,6 @@ Rails.application.routes.draw do
     resources :trips, only: :create
     
     get 'stats/weekly'
+    get 'stats/monthly'
   end
 end
