@@ -3,8 +3,13 @@
 module Api
   class TripsController < ApplicationController
     def create
-      trip = TripSaverService.new.call(trip_params)
-      render json: trip, status: trip[:status]
+      trip = TripService.call(trip_params)
+
+      if trip.save
+        render json: trip, status: :created
+      else
+        render json: trip.errors, status: :unprocessable_entity
+      end
     end
 
     private
