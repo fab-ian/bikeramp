@@ -10,9 +10,9 @@ class Stats
     def monthly_query
       <<-QUERY.gsub(/\s+/, ' ').strip
         SELECT t.date,
-        (SELECT sum(v.distance) FROM trips AS v WHERE date = t.date) AS total_distance,
-        (SELECT avg(v.distance) FROM trips AS v WHERE date = t.date) AS avg_ride,
-        (SELECT avg(v.price) FROM trips AS v WHERE date = t.date) AS avg_price
+        sum(distance) AS total_distance,
+        avg(distance) AS avg_ride,
+        avg(price) AS avg_price
 
         FROM trips AS t
         WHERE t.date > ? AND t.date < ?
